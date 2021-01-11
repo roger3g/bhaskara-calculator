@@ -1,0 +1,97 @@
+:root {
+  --color-primary: #fd951f;
+  --color-background: #130f0d;
+  --color-text: #f0f0f5;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0.9rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 0.2rem;
+}
+
+body {
+  font: 500 1.6rem Poppins;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+input {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: 0.2rem solid var(--color-primary);
+  padding: 1.4rem;
+}
+
+label {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.8rem;
+  width: 10rem;
+  background-color: var(--color-primary);
+  border: 0.2rem solid var(--color-primary);
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+#container {
+  height: 60rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container #input-data, #container #output-data {
+  width: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#container #output-data {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 60%;
+  }
+
+  #container {
+    padding: 0;
+    height: initial;
+    flex-direction: column;
+  }
+
+  #container #input-data {
+    width: 100%;
+  }
+
+  #container #output-data {
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+  }
+}
